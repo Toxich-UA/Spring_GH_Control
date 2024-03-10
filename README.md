@@ -16,13 +16,13 @@ The POST request with a special code to
     http://192.168.xxx.xxx/sensors
 ```
 
-will return a data of all connected nodes with the sensor value and peripherals status
+will return a data of all connected node with the sensor value and peripherals status
 
 ```json
 {
     "ip": "192.168.xxx.xxx",
     "sensors": {
-        "temperature": {
+        "temperatureSensors": {
             "DH22_temperature": {
                 "val": -128,
                 "change": 0
@@ -48,7 +48,7 @@ will return a data of all connected nodes with the sensor value and peripherals 
                 "change": 0
             }
         },
-        "humidity":{
+        "humiditySensors":{
             "DH22_humidity": {
                 "val": -128,
                 "change": 0
