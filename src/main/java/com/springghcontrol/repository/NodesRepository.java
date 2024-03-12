@@ -1,6 +1,6 @@
-package com.toxich.Spring_GH_Control.DB.Repository;
+package com.springghcontrol.repository;
 
-import com.toxich.Spring_GH_Control.DB.Model.Node;
+import com.springghcontrol.model.Node;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface NodesRepository extends JpaRepository<Node, Integer> {

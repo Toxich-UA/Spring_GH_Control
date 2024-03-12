@@ -1,39 +1,43 @@
-package com.toxich.Spring_GH_Control.DB.Model;
+package com.springghcontrol.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "TemperatureSensors")
+@Table(name = "HumiditySensors")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class TemperatureSensor {
-
+@Data
+public class HumiditySensor {
     @Id
     @SequenceGenerator(
-            name = "temperature_id_sequence",
-            sequenceName = "temperature_id_sequence",
+            name = "humidity_id_sequence",
+            sequenceName = "humidity_id_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "temperature_id_sequence"
+            generator = "humidity_id_sequence"
     )
     private Integer id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "nodeId")
+    @JsonBackReference
     private Node nodeId;
 
     private String sensorName;
 
     private String name;
 
-    public TemperatureSensor(Node nodeId, String sensorName, String name) {
+    public HumiditySensor(Node nodeId, String sensorName, String name) {
         this.nodeId = nodeId;
         this.sensorName = sensorName;
         this.name = name;

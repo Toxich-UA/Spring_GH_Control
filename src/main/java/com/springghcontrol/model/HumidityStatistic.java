@@ -1,4 +1,4 @@
-package com.toxich.Spring_GH_Control.DB.Model;
+package com.springghcontrol.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,24 +10,26 @@ import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "teperatureStatistic")
+@Table(name = "humidityStatistic")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class TemperatureStatistic {
+@Data
+public class HumidityStatistic {
 
   @Id
   @SequenceGenerator(
-      name = "temperatureStatistic_id_sequence",
-      sequenceName = "temperatureStatistic_id_sequence",
+      name = "humidityStatistic_id_sequence",
+      sequenceName = "humidityStatistic_id_sequence",
       allocationSize = 1
   )
   @GeneratedValue(
       strategy = GenerationType.SEQUENCE,
-      generator = "temperatureStatistic_id_sequence"
+      generator = "humidityStatistic_id_sequence"
   )
   private Long id;
 
@@ -37,24 +39,24 @@ public class TemperatureStatistic {
 
   private Integer dh22;
 
-  private Integer oneWire1;
+  private Integer sensor1;
 
-  private Integer oneWire2;
+  private Integer sensor2;
 
-  private Integer oneWire3;
+  private Integer sensor3;
 
-  private Integer oneWire4;
+  private Integer sensor4;
 
-  private Integer oneWire5;
+  private Integer sensor5;
 
-  public TemperatureStatistic(Node nodeId, Integer dh22, Integer oneWire1, Integer oneWire2,
-      Integer oneWire3, Integer oneWire4, Integer oneWire5) {
+  public HumidityStatistic(Node nodeId, Integer dh22, Integer sensor1, Integer sensor2,
+      Integer sensor3, Integer sensor4, Integer sensor5) {
     this.nodeId = nodeId;
     this.dh22 = dh22;
-    this.oneWire1 = oneWire1;
-    this.oneWire2 = oneWire2;
-    this.oneWire3 = oneWire3;
-    this.oneWire4 = oneWire4;
-    this.oneWire5 = oneWire5;
+    this.sensor1 = sensor1;
+    this.sensor2 = sensor2;
+    this.sensor3 = sensor3;
+    this.sensor4 = sensor4;
+    this.sensor5 = sensor5;
   }
 }

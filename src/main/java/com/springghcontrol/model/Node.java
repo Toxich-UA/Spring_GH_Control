@@ -1,9 +1,13 @@
-package com.toxich.Spring_GH_Control.DB.Model;
+package com.springghcontrol.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -11,6 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Data
 public class Node {
     @Id
     @SequenceGenerator(
@@ -26,6 +31,14 @@ public class Node {
     private String ip;
     private String name;
     private String description;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "nodeId")
+    @JsonManagedReference
+    private List<TemperatureSensor> temperatureSensors;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "nodeId")
+    @JsonManagedReference
+    private List<HumiditySensor> humiditySensors;
 
     public Node(String ip, String name, String description) {
         this.ip = ip;

@@ -5,11 +5,21 @@ There are using raspberry pi (could be different pc) as main server,
 and NodeMcu (or similar board with build in Wi-Fi) with set of sensors like: DS18B20, DH22, and capacitive soil moisture
 sensor.
 
-The `node` (ESP32 board) will serve the web server to get data from sensors and provide it to the `server` (raspberry
+The `Node` (ESP32 board) will serve the web server to get data from sensors and provide it to the `server` (raspberry
 pi) wia http response.
 
 Usage
 =====
+- [ ] Get nodes
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+
+Node API
+========
 The POST request with a special code to
 
 ```http
@@ -23,36 +33,6 @@ will return a data of all connected node with the sensor value and peripherals s
     "ip": "192.168.xxx.xxx",
     "sensors": {
         "temperatureSensors": {
-            "DH22_temperature": {
-                "val": -128,
-                "change": 0
-            },
-            "OneWire_a": {
-                "val": -128,
-                "change": 0
-            },
-            "OneWire_b": {
-                "val": -128,
-                "change": 0
-            },
-            "OneWire_c": {
-                "val": -128,
-                "change": 0
-            },
-            "OneWire_d": {
-                "val": -128,
-                "change": 0
-            },
-            "OneWire_e": {
-                "val": -128,
-                "change": 0
-            }
-        },
-        "humiditySensors":{
-            "DH22_humidity": {
-                "val": -128,
-                "change": 0
-            },
             "a": {
                 "val": -128,
                 "change": 0
@@ -66,6 +46,36 @@ will return a data of all connected node with the sensor value and peripherals s
                 "change": 0
             },
             "d": {
+                "val": -128,
+                "change": 0
+            },
+            "e": {
+                "val": -128,
+                "change": 0
+            },
+            "f": {
+                "val": -128,
+                "change": 0
+            }
+        },
+        "humiditySensors":{
+            "a": {
+                "val": -128,
+                "change": 0
+            },
+            "b": {
+                "val": -128,
+                "change": 0
+            },
+            "c": {
+                "val": -128,
+                "change": 0
+            },
+            "d": {
+                "val": -128,
+                "change": 0
+            },
+            "e": {
                 "val": -128,
                 "change": 0
             }
@@ -111,9 +121,6 @@ will return current status for all peripherals. The value can be between [ -1:1 
 will set status of peripheral `{pName}` (fans, pump, lamps) to On (1) or Off (0)
 and return it's current status (0 / 1)
 
-
-Node api
-========
 
 
 Database

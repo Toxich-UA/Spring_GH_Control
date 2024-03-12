@@ -1,7 +1,7 @@
-package com.toxich.Spring_GH_Control.DB.Repository;
+package com.springghcontrol.repository;
 
-import com.toxich.Spring_GH_Control.DB.Model.HumiditySensor;
-import com.toxich.Spring_GH_Control.DB.Model.Node;
+import com.springghcontrol.model.HumiditySensor;
+import com.springghcontrol.model.Node;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

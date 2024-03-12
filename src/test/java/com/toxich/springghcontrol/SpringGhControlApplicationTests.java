@@ -1,4 +1,4 @@
-package com.toxich.Spring_GH_Control;
+package com.toxich.springghcontrol;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

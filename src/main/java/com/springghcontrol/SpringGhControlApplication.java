@@ -1,5 +1,6 @@
-package com.toxich.Spring_GH_Control;
+package com.springghcontrol;
 
+import com.springghcontrol.service.impl.RequesterServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
