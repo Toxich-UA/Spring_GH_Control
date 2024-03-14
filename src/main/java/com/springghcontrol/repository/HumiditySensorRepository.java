@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface HumiditySensorRepository extends JpaRepository<HumiditySensor, Integer> {
-    List<HumiditySensor> findByNodeId(Node nodeId);
+    List<HumiditySensor> findByNodeId(Node node);
 }

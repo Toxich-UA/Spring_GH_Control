@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface NodesRepository extends JpaRepository<Node, Integer> {
 
+    Node getNodeByIp(String ip);
 }

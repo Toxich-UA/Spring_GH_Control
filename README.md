@@ -20,7 +20,7 @@ Usage
 
 Node API
 ========
-The POST request with a special code to
+The GET request to
 
 ```http
     http://192.168.xxx.xxx/sensors
@@ -32,7 +32,7 @@ will return a data of all connected node with the sensor value and peripherals s
 {
     "ip": "192.168.xxx.xxx",
     "sensors": {
-        "temperatureSensors": {
+        "temperature": {
             "a": {
                 "val": -128,
                 "change": 0
@@ -58,7 +58,7 @@ will return a data of all connected node with the sensor value and peripherals s
                 "change": 0
             }
         },
-        "humiditySensors":{
+        "humidity":{
             "a": {
                 "val": -128,
                 "change": 0
