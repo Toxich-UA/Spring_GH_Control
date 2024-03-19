@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.toxich</groupId>
-    <artifactId>Spring_GH_Control</artifactId>
+    <artifactId>SpringGHControl</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Spring_GH_Control</name>
     <description>REST api project for greenhouse control</description>
@@ -55,6 +55,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>GHControl</finalName>
     </build>
 
 </project>
